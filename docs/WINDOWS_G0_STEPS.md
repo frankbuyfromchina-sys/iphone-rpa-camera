@@ -1,6 +1,6 @@
-# Surface Windows 复现（NOT_RUN）
+# Surface Windows 复现与实测验证（G0_WINDOWS_CAMERA_GO）
 
-Windows 尚未在本次验收中实际运行。复制/克隆同一仓库，安装 Python 3.10+；不需要 pip 包或另一款 iOS App。手机和 Surface 在同一可信 Wi-Fi，手机 RPA Camera 保持前台并启动服务。
+已在 Microsoft Surface Pro 4 (Windows 10 Home China 64-bit, Python 3.12.10) 现场完成真实验收，全项指标均通过（详见 [G0_WINDOWS_CAMERA_REPORT.md](G0_WINDOWS_CAMERA_REPORT.md)）。复制/克隆同一仓库，安装 Python 3.10+；不需要 pip 包或另一款 iOS App。手机和 Surface 在同一可信 Wi-Fi，手机 RPA Camera 保持前台并启动服务。
 
 在仓库根目录运行 PowerShell（IP 为示例，替换为手机当前私有地址）：
 

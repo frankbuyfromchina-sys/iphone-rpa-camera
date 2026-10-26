@@ -10,7 +10,7 @@
 
 - iPhone 7 Plus / iOS 15.8.6、Mac：真实 JPEG 4032×3024；12 连拍 12/12 成功；停止后明确失败，重启后恢复；错误 Token 返回 403。
 - 连拍延迟 p50 0.555 秒、p95 1.236 秒。这是单次现场 POC，不能推断所有网络或设备都达到该性能。
-- Windows：**NOT_RUN**；提供相同客户端和复现步骤，未声称 Windows 实测通过。
+- Windows：**G0_WINDOWS_CAMERA_GO**；Surface Pro 4 / Windows 10 现场实测通过，累计 57 次正常拍照 100% 成功，延迟 p50 0.781s、p95 0.938s；停止识别、错误 Token 拒绝与重启恢复均经真实验收。详见 [Windows 真机验收报告](docs/G0_WINDOWS_CAMERA_REPORT.md)。
 - 尚未接入微信 Reader、OCR、ESP32 或业务状态机。
 
 ## 工程结构
@@ -55,7 +55,8 @@ python3 -m unittest discover -s tests -v
 - [HTTP 协议与故障排查](docs/PROTOCOL.md)
 - [真实 iPhone G0 验收报告（脱敏版）](docs/G0_REAL_IPHONE_REPORT.md)
 - [可复现的验收流程](docs/ACCEPTANCE.md)
-- [Surface Windows 复现](docs/WINDOWS_G0_STEPS.md)
+- [Windows 真机验收报告（脱敏版）](docs/G0_WINDOWS_CAMERA_REPORT.md)
+- [Surface Windows 复现与实测验证](docs/WINDOWS_G0_STEPS.md)
 - [公开仓库隐私处理](docs/PRIVACY.md)
 - [历史交付说明](docs/archive/)
 
@@ -71,7 +72,7 @@ Turn an idle iPhone into an on-demand camera on your local network. The native S
 
 - **iPhone 7 Plus / iOS 15.8.6 with a Mac:** real 4032×3024 JPEGs; 12 out of 12 consecutive captures succeeded; requests failed explicitly after stopping the service and succeeded again after restarting it; an incorrect token returned HTTP 403.
 - Capture latency during that sequence: **p50 0.555 seconds, p95 1.236 seconds**. These results come from one on-device proof of concept and do not guarantee the same performance on other devices or networks.
-- **Windows: NOT_RUN.** The same client and reproduction steps are provided, but Windows has not passed an on-device test.
+- **Windows: G0_WINDOWS_CAMERA_GO.** Verified on-device using a Microsoft Surface Pro 4 running Windows 10; 57/57 consecutive captures succeeded across 5s and 10s intervals (latency p50 0.781s, p95 0.938s). Service termination, wrong token rejection, and recovery tests all passed. See [Windows Verification Report](docs/G0_WINDOWS_CAMERA_REPORT.md).
 - No integration with the WeChat Reader, OCR, ESP32, or business state machine has been performed.
 
 ### Repository layout
